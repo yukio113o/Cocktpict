@@ -1,0 +1,11 @@
+<div class="card-header align-items-center d-flex">
+  <% @users.each do |user| %>
+    <%= link_to user_path(user), class: "no-text-decoration" do %>
+      <%= image_tag user.profile_photo.url %>
+    <% end %>
+    <%= link_to user_path(user), class: "black-color no-text-decoration",
+      title: user.name do %>
+      <strong class="col-md-8 col-md-offset-2"><%= user.name %></strong>
+    <% end %>
+  <% end %>
+</div>
